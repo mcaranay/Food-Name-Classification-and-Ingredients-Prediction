@@ -12,6 +12,7 @@ https://drive.google.com/drive/folders/1Mxw8-AuN2pPT2_6ItGFi_jwCdMOq2OYn?usp=sha
 Download the whole folder 'ingredients101_model' and paste it in 'mlflow_pretrained_models' without changing its name.  
 
 Download the Food101 dataset here: https://www.vision.ee.ethz.ch/datasets_extra/food-101/ 
+
 YS: I got it from here: https://www.kaggle.com/dansbecker/food-101
 
 Extract it and rename the 'images' folder to 'train'. That's all.
@@ -41,6 +42,7 @@ List of parameters:
 mlflow run . -e train_ingredients -P data_path='/training_data/' -P size=256 -P bs=32 -P epochs=32 -P load=True -P device='cpu'
 
 YS: Command I ran
+
 mlflow run . -e train_ingredients -P data_path='/Users/yachnasharma/Documents/ML_AI_advising/recipe_to_ingredients/food-101/' -P size=256 -P bs=32 -P epochs=32 -P load=True -P device='cpu' --no-conda
 
 ### Classify
