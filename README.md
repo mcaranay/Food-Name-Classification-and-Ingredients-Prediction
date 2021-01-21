@@ -21,6 +21,10 @@ Extract it and rename the 'images' folder to 'train'. That's all.
 
 ### Train:
 
+YS: creating env
+
+conda env create -f conda.yaml
+
 List of parameters: 
 
   data_path: Full path to the directory of training images. Make sure to keep all images in a folder named 'train' before running script. e.g. if images are in '/training_data/train/', data_path = '/training_data/'.  
