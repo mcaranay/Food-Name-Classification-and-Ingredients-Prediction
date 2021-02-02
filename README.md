@@ -21,7 +21,7 @@ Extract it and rename the 'images' folder to 'train'. That's all.
 
 ### Train:
 
-YS: creating env
+MC: creating env
 
 conda env create -f conda.yaml
 
@@ -45,9 +45,9 @@ List of parameters:
 
 mlflow run . -e train_ingredients -P data_path='/training_data/' -P size=256 -P bs=32 -P epochs=32 -P load=True -P device='cpu'
 
-YS: Command I ran
+MC: Command I ran
 
-mlflow run . -e train_ingredients -P data_path='/Users/yachnasharma/Documents/ML_AI_advising/recipe_to_ingredients/food-101/' -P size=256 -P bs=32 -P epochs=32 -P load=True -P device='cpu' --no-conda
+mlflow run . -e train_ingredients -P data_path='/Users/yachnasharma/Documents/ML_AI_advising/recipe_to_ingredients/food-101/' -P size=256 -P bs=32 -P epochs=32 -P load=True -P device='cuda' --no-conda
 
 ### Classify
 
@@ -61,3 +61,7 @@ List of parameters:
 #### Command:    
 
 mlflow run . -e classify_ingredients -P input_path='example_images/bg.jpeg' -P device='cpu'  
+
+MC: Command I ran
+
+mlflow run . -e classify_ingredients -P input_path='example_images/bg.jpeg' -P device='cuda' --no-conda  
